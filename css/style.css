@@ -4,43 +4,35 @@
 }
 
 #nav{
-    background-color: #C0E5A3;
+    background-color: lightslategrey;
 }
 
 #footer{
-    background-color: #C0E5A3; 
+    background-color: lightgrey; 
 }
 
 
 #name{
-    /* background: linear-gradient(112deg, #FFFFFF 50%,#C0E5A3  50%); */
+    background: linear-gradient(112deg, #FFFFFF 50%, lightgrey  50%);
     border: 3px solid #f1f1f1;
-    position: relative;
-    top: 15%;
-    left: 10%;
+    margin-top:8%;
+    margin-left:10%;
     width: 80%;
     padding: 20px;
+    box-shadow:  0 0 5px white, 0 0 10px white, 0 0 15px white;
     
 }
 
-#logo{
-    width:50px;
-
+.body1{
+    background-image: url("https://i.postimg.cc/2jBSng5d/img1.jpg");
+    /* background: linear-gradient(112deg, #F5FFFA 50%, lightgrey  50%);*/
+    /* background-color:#F5FFFA;  */
 }
 
-/* #whatWeDo{
-    background-color: rgb(0,0,0); 
-    background-color: rgba(0,0,0, 0.4); 
-    color: white;
-    font-weight: bold;
-    border: 3px solid #f1f1f1;
-    position: relative;
-    top: 15%;
-    left: 10%;
-    width: 80%;
-    padding: 20px;
-    text-align: center;
-} */
+#logo{
+    width:55px;
+
+}
 
 #missionImg{
     text-align: center;
@@ -55,3 +47,20 @@
 #homeImg{
     width:55%;
 }
+#img3{
+    width:40%;
+}
+#img5{
+    width:40%;
+    height:55vh;
+}
+#carouselExampleAutoplaying{
+    padding-top:1%;
+    
+}
+#img{
+ float: left;
+ padding:5px;
+}
+
+
