@@ -22,41 +22,109 @@ products=JSON.parse(localStorage.getItem('products'))
 
 let items=document.querySelector('[data-items]')
 
+// let c=products.map(function (item,index) {
+//     return `
+//         <div class="col">
+//             <div class="card h-100 w-75">
+//                 <img src="${item.url}" class="card-img-top " >
+//                     <div class="card-body">
+//                         <h5 class="card-title">${item.name}</h5>
+//                         <p class="card-text">${item.description}.</p>
+//                         <p class="price">R${item.price}</p>
+//                         <button 'class='w-50' id='btnAdd' data-add>Add to cart</button>
+//                     </div>
+//              </div>
+//          </div>
+    
+//     `
+// }).join('')
 
     
-    let calla=products.map(function (item,index) {
-        return `
-            <div class="col">
-                <div class="card h-100 w-75">
-                    <img src="${item.url}" class="card-img-top " >
-                        <div class="card-body">
-                            <h5 class="card-title">${item.name}</h5>
-                            <p class="card-text">${item.description}.</p>
-                            <p class="price">R${item.price}</p>
-                            <button 'class='w-50' id='btnAdd' data-add>Add to cart</button>
-                        </div>
-                 </div>
-             </div>
-        
-        `
-    }).join('')
-    items.innerHTML=calla
-
-
-let searchbtn=document.querySelector('[data-search]')
-let inputV=document.querySelector('[data-input]')
-let sortbtn=document.querySelector('[data-sort]')
+//     items.innerHTML=c
 
 
 
-sortbtn.addEventListener('click', function ( ) {
+
+//sort
+
+
+
+// sortbtn.addEventListener('click', )
+
+// let compPrice =(a,b)=>a.price-b.price;
+// let sortedPrice=products.sort(compPrice) 
+// // c(sortedPrice)
+// console.log(sortedPrice)
+
+// sortbtn.addEventListener('click',function () {
+    //     alert('hi')
+    //     products.sort((a, b) => a.price - b.price);
+    //     return 
+    // })
     
-    products.sort(function(a,b){
-        if (a.price < b.price) {
-            return -1;
-          } else if(a.price>b.price){
-            return 1
-          }
+    // function sortPrice() {
+            //     let sortedPrice=[...products].sort((a,b)=>{
+                //         return parseInt(a.price)-parseInt(b.price)
+                    //         console.log(sortedPrice);
+                    //     });
+                    // if (sortPrice) {
+                        //     items.innerHTML=sortedPrice
+                        // }
+                        // }
+                        // sortbtn.addEventListener('click', sortPrice)
+                        
+                        
+                        // let searchbtn=document.querySelector('[data-search]')
+                        //search function
+                        
+                        //                         let inputV=document.querySelector('[data-input]')
+                        //                         //addevent
+                        //                         inputV.addEventListener("keyup", () => {
+                            //                             let SearchItem = products.filter((prod) => {
+                                //     return prod.name.toLowerCase().includes(inputV.value.toLowerCase());
+                                //   });
+                                //   if (SearchItem) {
+                                    //   items.innerHTML=("SearchItem");
+                                    //   }
+                                    // });
+                                    
+                                    function productDisplay(){
+                                        let p = products.map(function(item,index) {
+                                            console.log(item); 
+                                            return`
+                                            <div class="col">
+                                            <div class="card h-100 w-75">
+                                            <img src="${item.url}" class="card-img-top " >
+                                            <div class="card-body">
+                                            <h5 class="card-title">${item.name}</h5>
+                                            <p class="card-text">${item.description}.</p>
+                                            <p class="price">R${item.price}</p>
+                                            <button 'class='w-50' id='btnAdd' data-add>Add to cart</button>
+                                            </div>
+         </div>
+     </div>
+
+        `   
     })
-})
+    //join will join the trs together 
+    items.innerHTML=p.join('')
+}
+productDisplay()
 
+let compPrice= (a,b)=> {
+        return a.price-b.price;  
+    }
+    
+    let sortedPrice=products.sort(compPrice)
+    
+    console.log(sortedPrice);
+    
+    
+// function sortPrice() {
+//     let sortedPrice=products.sort((a,b)=>{
+//         return parseInt(a.price) - parseInt (b.price);
+//     })
+//     productDisplay(sortedPrice)
+// }
+// let sortbtn=document.querySelector('[data-sort]')
+//  sortbtn.addEventListener('click', sortPrice )
