@@ -31,6 +31,7 @@
 
 #logo{
     width:55px;
+    
 
 }
 
@@ -61,6 +62,9 @@
 #img{
  float: left;
  padding:5px;
+}
+#btnAdd{
+  border-radius: 20px;
 }
 
 
