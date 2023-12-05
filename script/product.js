@@ -20,7 +20,7 @@
 products=JSON.parse(localStorage.getItem('products'))
 // let cart=[]//everything being purchased must be added here
 
-let items=document.querySelector('[data-items]')//
+let items=document.querySelector('[data-items]')
 
 
     
