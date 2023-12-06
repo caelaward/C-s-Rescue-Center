@@ -112,6 +112,7 @@ let sortbtn=document.querySelector('[data-sort]')
 //     console.log(sortedPrice);
 // }
 
+//sort function
 sortbtn.addEventListener('click', sortPrice )
 
 function sortPrice(event) {
@@ -127,18 +128,7 @@ function sortPrice(event) {
     console.log(sortedPrice);
 
 }
-// let sortbtn=document.querySelector('[data-sort]')
 
-// //addevent
-
-// inputV.addEventListener("input", () => {
-    //   let SearchItem = products.filter((prod) => {
-        //     return prod.name.toLowerCase().includes(inputV.value.toLowerCase());
-        //   });
-        //   if (SearchItem) {
-            //     productDisplay(SearchItem);
-            //   }
-            // });
             
  //search function
  let inputV=document.querySelector('[data-input]')
