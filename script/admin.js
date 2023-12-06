@@ -79,4 +79,19 @@ function updateData() {
     products=JSON.parse(localStorage.getItem('products'))
 }
 
+//sort function
+sortbtn.addEventListener('click', sortPrice )
 
+function sortPrice(event) {
+
+     event.preventDefault()
+
+    let sortedPrice=products.sort((a,b)=>{
+        return parseInt(a.price) - parseInt (b.price);
+    });
+
+    tableDisplay(sortedPrice)
+    alert('Items will be sorted by price from low to high')
+    console.log(sortedPrice);
+
+}
