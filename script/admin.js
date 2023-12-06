@@ -78,3 +78,5 @@ function updateData() {
     localStorage.setItem('products',JSON.stringify(products))
     products=JSON.parse(localStorage.getItem('products'))
 }
+
+
