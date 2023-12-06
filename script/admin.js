@@ -21,3 +21,35 @@ localStorage.setItem('products',JSON.stringify(products))
 //get items back removing string
 products=JSON.parse(localStorage.getItem('products'))
 
+let display=document.querySelector('[data-table]')
+function tableDisplay(){
+    let p = products.map(function(item,index) {
+        console.log(item); 
+        console.log(index);
+        return`
+        <thead>
+        <tr>
+          <th scope="col">Item</th>
+          <th scope="col">Description</th>
+          <th scope="col">price</th>
+          <th scope="col">img</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>${item.name}</td>
+          <td>${item.description}</td>
+          <td>${item.price}</td>
+          <td><img src="${item.url}" id="img-table"></td>
+          <td><button>X</button></td>
+          <td><button>Edit</button></td>
+          </tr>
+    <tbody>
+
+
+            `
+    })
+    //join will join the trs together 
+    display.innerHTML=p.join('')
+}
+tableDisplay()//will ensure that the function still running
