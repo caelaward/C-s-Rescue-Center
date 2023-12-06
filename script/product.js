@@ -101,8 +101,8 @@ let items=document.querySelector('[data-items]')
                                             <p class="price">R${item.price}</p>
                                             <button 'class='w-50' id='btnAdd' data-add>Add to cart</button>
                                             </div>
-         </div>
-     </div>
+                                            </div>
+                                           </div>
 
         `   
     })

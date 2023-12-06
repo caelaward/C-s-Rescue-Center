@@ -66,5 +66,12 @@
 #btnAdd{
   border-radius: 20px;
 }
-
+#img-table{
+    width:50px;
+    
+}
+.table{
+    /* max-width: fit-content; */
+    width: 50%;
+}
 
