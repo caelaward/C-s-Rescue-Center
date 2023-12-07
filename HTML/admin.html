@@ -45,7 +45,8 @@
     <h1 class="text-center">Admin Page</h1>
 
     <main class="container">
-      <button data-addbtn>Add</button>
+      <button class="btn btn-outline-secondary me-2 " data-addbtn>Add</button>
+      <button class="btn btn-outline-secondary me-2 " type="sort" data-sort>sort</button>
       
       <table data-table class="table">
         
@@ -70,6 +71,27 @@
           </div>
         </div>
       </div> 
+
+      <div class="modal" tabindex="-1" id="modalEdit">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Add More Products</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" ></button>
+            </div>
+            <input class="modal-body"> 
+              <input type= "text" data-input5 placeholder="Item name..." required>
+             <input type= "text" data-input6 placeholder="Item description..." required>
+             <input type= "text" data-input7 placeholder="Item price..." required>
+             <input type= "text" data-input8 placeholder="Item url..." required>
+             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+             <button data-savebtn type="button" class="btn btn-primary" onclick="saveEdit()" >Save changes</button>
+            </div>
+            
+          </div>
+        </div>
+      </div> 
+
 
      
     </main>

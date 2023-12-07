@@ -44,7 +44,7 @@ function tableDisplay(){
           <td>${item.price}</td>
           <td><img src="${item.url}" id="img-table"></td>
           <td><button class="delete" value=${index}>X</button></td>
-          <td><button>Edit</button></td>
+          <td><button class="edit" value=${index} >Edit</button></td>
           </tr>
     <tbody>
 
@@ -100,9 +100,80 @@ savebtn.addEventListener('click', saveAdded )
   let input3=document.querySelector('[data-input3]').value
   let input4=document.querySelector('[data-input4]').value
   let newObj= new ProdCon(input1,input2,input3,input4)
-  console.log(newObj);
+  // console.log(newObj);
   products.push(newObj)
   updateData()
   // localStorage.setItem('products',JSON.stringify(products))
   tableDisplay()
 }
+
+let editButton=document.querySelector('.edit')
+display.addEventListener('click',function () {
+    //event.target will pick up anything clicked inside the parent tag (from the children)
+    if(event.target.classList.contains('edit')) {
+        //event.target is the button
+        // removeP(event.target.value) //passing value set to button
+        // alert("Item will be edited")
+        editFunction(event.target.value)
+
+       
+    }
+    updateData()
+
+})
+
+function editFunction(index) {
+        let input5=document.querySelector('[data-input5]')
+        let input6=document.querySelector('[data-input6]')
+        let input7=document.querySelector('[data-input7]')
+        let input8=document.querySelector('[data-input8]')
+        input5.value=products[index].name
+        input6.value=products[index].description
+        input7.value=products[index].price
+        input8.value=products[index].url
+    
+ document.getElementById('modalEdit').style.display='block'
+ document.getElementById('modalEdit').setAttribute('data-index',index)
+
+        
+}
+// tableDisplay(editFunction) 
+
+function saveEdit() {
+  let input5=document.querySelector('[data-input5]').value.trim()
+  let input6=document.querySelector('[data-input6]').value.trim()
+  let input7=document.querySelector('[data-input7]').value.trim()
+  let input8=document.querySelector('[data-input8]').value.trim()
+  let position=document.getElementById('modalEdit').getAttribute('data-index')
+        products[position].name= input5
+        products[position].description=input6
+        products[position].price=input7
+        products[position].url=input8
+    
+   updateData()
+   editdone() 
+   tableDisplay()
+}
+
+function editdone() {
+  document.getElementById('modalEdit').style.display='none'
+
+
+}
+//sort function
+let sortbtn=document.querySelector('[data-sort]')
+sortbtn.addEventListener('click', sortPrice )
+
+function sortPrice(event) {
+
+     event.preventDefault()
+
+    let sortedPrice=products.sort((a,b)=>{
+        return parseInt(a.price) - parseInt (b.price);
+    });
+
+    tableDisplay(sortedPrice)
+    alert('Items will be sorted by price from low to high')
+    console.log(sortedPrice);
+
+}  
