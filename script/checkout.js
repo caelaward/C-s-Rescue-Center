@@ -5,8 +5,8 @@ let total=0
 function checkoutDisplay(){
     let p = cart.map(function(item,index) {
         // console.log(item); 
-        // console.log(index);
         total += +item.price;
+        // console.log(index);
         return`
         <thead>
         <tr>
@@ -59,7 +59,7 @@ function removeP(position) {
     checkoutDisplay()//function to view.. function to loop through array
 
 }
-
+ 
 function updateData() {
     localStorage.setItem('cart',JSON.stringify(cart))
     cart=JSON.parse(localStorage.getItem('cart'))
@@ -86,6 +86,7 @@ function updateData() {
 //         index) => cart.indexOf(item) === index);
     
 // }
+
 // // (removeDuplicates(cart))
 // console.log(removeDuplicates(cart));
 

@@ -64,7 +64,7 @@ function sortPrice(event) {
     alert('Items will be sorted by price from low to high')
     console.log(sortedPrice);
 
-}
+}  
 
 
  //search function
