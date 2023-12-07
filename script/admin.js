@@ -86,12 +86,23 @@ function updateData() {
 let modal = new bootstrap.Modal(document.querySelector('.modal')); // Initialize the modal
 let addbtn=document.querySelector('[data-addbtn]')
 addbtn.addEventListener('click',function () {
-  let input1=document.querySelector('[data-input1]')
-  let input2=document.querySelector('[data-input2]')
-  let input3=document.querySelector('[data-input3]')
-  let input4=document.querySelector('[data-input4]')
-  let newObj= new ProdCon(input1,input2,input3,input4)
-  alert('hi')
-  products.push[newObj]
+
   modal.show();
 })
+
+let savebtn=document.querySelector('[data-savebtn]')
+
+savebtn.addEventListener('click', something )
+ function something() {
+  alert('nbiunwdjnfjn')
+  let input1=document.querySelector('[data-input1]').value
+  let input2=document.querySelector('[data-input2]').value
+  let input3=document.querySelector('[data-input3]').value
+  let input4=document.querySelector('[data-input4]').value
+  let newObj= new ProdCon(input1,input2,input3,input4)
+  console.log(newObj);
+  products.push(newObj)
+  updateData()
+  // localStorage.setItem('products',JSON.stringify(products))
+  tableDisplay()
+}
