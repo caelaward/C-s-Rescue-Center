@@ -4,36 +4,36 @@ let displayCheckout=document.querySelector('[data-checkout]')
 let total=0
 function checkoutDisplay(){
     let p = cart.map(function(item,index) {
-        total += +item.price;
         // console.log(item); 
         // console.log(index);
+        total += +item.price;
         return`
         <thead>
         <tr>
-            <th scope="col"></th>
-          <th scope="col">Item</th>
-          <th scope="col">Description</th>
-          <th scope="col">price</th>
-          <th scope="col">img</th>
-          <th scope="col">Q</th>
-          <th scope="col"></th>
+        <th scope="col"></th>
+        <th scope="col">Item</th>
+        <th scope="col">Description</th>
+        <th scope="col">price</th>
+        <th scope="col">img</th>
+        <th scope="col">Quantity</th>
+        <th scope="col"></th>
         </tr>
-      </thead>
-      <tbody>
+        </thead>
+        <tbody>
         <tr>
         <td>${index+1}</td>
-          <td>${item.name}</td>
-          <td>${item.description}</td>
-          <td>R${item.price}</td>
-          <td><img src="${item.url}" id="img-table"></td>
-          <td></td>
-          <td><button class="delete" value=${index}>X</button></td>
-          </tr>
-    <tbody>
-
-       
-
-            `
+        <td>${item.name}</td>
+        <td>${item.description}</td>
+        <td>R${item.price}</td>
+        <td><img src="${item.url}" id="img-table"></td>
+        <td><input type="number" class="w-25"></td>
+        <td><button class="delete" value=${index}>X</button></td>
+        </tr>
+        <tbody>
+        
+        
+        
+        `
     })
     totalDis.textContent = `R${total}`
     // join will join the trs together 
