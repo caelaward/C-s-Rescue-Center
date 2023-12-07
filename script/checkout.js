@@ -1,8 +1,10 @@
 cart=JSON.parse(localStorage.getItem('cart'))
-
+let totalDis=document.querySelector('[data-total]')
 let displayCheckout=document.querySelector('[data-checkout]')
+let total=0
 function checkoutDisplay(){
     let p = cart.map(function(item,index) {
+        total += +item.price;
         // console.log(item); 
         // console.log(index);
         return`
@@ -33,6 +35,7 @@ function checkoutDisplay(){
 
             `
     })
+    totalDis.textContent = `R${total}`
     // join will join the trs together 
     displayCheckout.innerHTML=p.join('')
 }
