@@ -78,3 +78,26 @@ function updateData() {
 
 // removeDuplicates(cart)
 
+// let arr = ["apple", "mango", "apple",
+//           "orange", "mango", "mango"];
+ 
+// function removeDuplicates(cart) {
+//     return cart.filter((item,
+//         index) => cart.indexOf(item) === index);
+    
+// }
+// // (removeDuplicates(cart))
+// console.log(removeDuplicates(cart));
+
+// let arr1 = [1,2,3,4];
+// let arr2 = [2,3,4,5,6];
+
+
+// Combine arrays without repeating values using indexOf
+// let arr3 = products.slice(); 
+// for (let i of cart) {
+//   if (arr3.indexOf(i) === -1) {
+//     arr3.push(i);
+//   }
+// }
+// console.log(arr3.sort());
