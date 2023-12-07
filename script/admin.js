@@ -14,10 +14,10 @@ let p2=new ProdCon('Dog Harness', 'Different colour harness , any size available
 let p3=new ProdCon('Cat printed Collars', 'Different colour collars with cat image printed on it. ' , 45 , "https://i.postimg.cc/5NjzGZS3/img12.jpg")
 let p4=new ProdCon('Rope lead', 'Different colour rope material lead' , 50 ,"https://i.postimg.cc/L5KXC3LT/rope-leash.jpg" )
 let p5=new ProdCon('Leather lead', 'Different colour waterproof lead ' , 75 , "https://i.postimg.cc/q7KHbVLP/leather-lead.jpg")
-let p6=new ProdCon('Teddys', ' ' , 30 , "https://i.postimg.cc/Pr4yXrzW/img9.jpg")
+let p6=new ProdCon('Cat bed', 'Comfy cat beds comes in various sizes and colours. Price varies depending on bed size starting at R60 for small acnd R200for L ' , 60 , "https://i.postimg.cc/yY9mw9BD/cat-bed.webp")
 let p7=new ProdCon('Chew Toy combo', 'Rainbow Ball, Paw Bone, 2 Knot Rope, Puppy Ball, Rope Ball, Ball with Handle ' , 55 , "https://i.postimg.cc/Dw2JcPKh/chew-toy-img.jpg")
 let p8=new ProdCon('Cat toy combo', ' Cat Sequin Feather StickToys,Plush Mouse Toy,Sisal Mouse Toy and Feather Mouse Cat' , 55, "https://i.postimg.cc/tCRn3zbj/cat-toy.jpg")
-let p9=new ProdCon('Dog bed', 'Comfy dog beds comes in various sizes and colours. Price varies depending on bed size starting at R100 for small and R450 for XL ' , 100-450 , "https://i.postimg.cc/TYyfvyqb/dog-bed.jpg")
+let p9=new ProdCon('Dog bed', 'Comfy dog beds comes in various sizes and colours. Price varies depending on bed size starting at R100 for small acnd R450 for XL ' ,100 ,"https://i.postimg.cc/TYyfvyqb/dog-bed.jpg")
 //pushing objs into empty array
 products.push(p1,p2,p3,p4,p5,p6,p7,p8,p9)
 //storing objs in local storage as string

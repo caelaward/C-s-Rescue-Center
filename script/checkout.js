@@ -2,11 +2,12 @@ cart=JSON.parse(localStorage.getItem('cart'))
 let totalDis=document.querySelector('[data-total]')
 let displayCheckout=document.querySelector('[data-checkout]')
 let total=0
+let arr=[]//to catch the doubled item selected.
 function checkoutDisplay(){
     let p = cart.map(function(item,index) {
-        // console.log(item); 
-        total += +item.price;
-        // console.log(index);
+        // takes items price and adds it 
+        total += +item.price ;
+    
         return`
         <thead>
         <tr>
@@ -26,7 +27,7 @@ function checkoutDisplay(){
         <td>${item.description}</td>
         <td>R${item.price}</td>
         <td><img src="${item.url}" id="img-table"></td>
-        <td><input type="number" class="w-25"></td>
+        <td><input type="number" class="w-25" ></td>
         <td><button class="delete" value=${index}>X</button></td>
         </tr>
         <tbody>
@@ -35,11 +36,14 @@ function checkoutDisplay(){
         
         `
     })
+    //displays the item price
     totalDis.textContent = `R${total}`
     // join will join the trs together 
     displayCheckout.innerHTML=p.join('')
 }
 checkoutDisplay()//will ensure that the function still running
+
+
 
 let deleteButton=document.querySelector('.delete')
 
@@ -54,52 +58,18 @@ displayCheckout.addEventListener('click',function () {
 })
 
 function removeP(position) {
-    cart.splice(position,1)//right now event.target and positionhas the same value
-    updateData()//function to set data and get it
+    cart.splice(position,1)//right now event.target and position has the same value
+    updateData()//function to set data and get it data
     checkoutDisplay()//function to view.. function to loop through array
 
 }
  
+//catches any errors when adding to local storage or trying to get items
 function updateData() {
-    localStorage.setItem('cart',JSON.stringify(cart))
-    cart=JSON.parse(localStorage.getItem('cart'))
+    try {
+        localStorage.setItem('cart', JSON.stringify(cart));
+        cart = JSON.parse(localStorage.getItem('cart')) || [];
+    } catch (error) {
+        console.error('Error in updateData:', error);
+    }
 }
-
-
-// function removeDuplicates(cart) {
-//     let unique = [];
-//     cart.forEach(item => {
-//         if (!unique.includes(item)) {
-//             unique.push(item);
-//         }
-//     });
-//     return unique;
-// }
-
-// removeDuplicates(cart)
-
-// let arr = ["apple", "mango", "apple",
-//           "orange", "mango", "mango"];
- 
-// function removeDuplicates(cart) {
-//     return cart.filter((item,
-//         index) => cart.indexOf(item) === index);
-    
-// }
-
-// // (removeDuplicates(cart))
-// console.log(removeDuplicates(cart));
-
-// let arr1 = [1,2,3,4];
-// let arr2 = [2,3,4,5,6];
-
-
-// Combine arrays without repeating values using indexOf
-// let arr3 = products.slice(); 
-// for (let i of cart) {
-//   if (arr3.indexOf(i) === -1) {
-//     arr3.push(i);
-//   }
-// }
-// console.log(arr3.sort());
-
