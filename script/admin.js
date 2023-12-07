@@ -79,19 +79,19 @@ function updateData() {
     products=JSON.parse(localStorage.getItem('products'))
 }
 
-//sort function
-sortbtn.addEventListener('click', sortPrice )
 
-function sortPrice(event) {
 
-     event.preventDefault()
+  
 
-    let sortedPrice=products.sort((a,b)=>{
-        return parseInt(a.price) - parseInt (b.price);
-    });
-
-    tableDisplay(sortedPrice)
-    alert('Items will be sorted by price from low to high')
-    console.log(sortedPrice);
-
-}
+let modal = new bootstrap.Modal(document.querySelector('.modal')); // Initialize the modal
+let addbtn=document.querySelector('[data-addbtn]')
+addbtn.addEventListener('click',function () {
+  let input1=document.querySelector('[data-input1]')
+  let input2=document.querySelector('[data-input2]')
+  let input3=document.querySelector('[data-input3]')
+  let input4=document.querySelector('[data-input4]')
+  let newObj= new ProdCon(input1,input2,input3,input4)
+  alert('hi')
+  products.push[newObj]
+  modal.show();
+})

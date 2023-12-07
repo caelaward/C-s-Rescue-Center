@@ -63,14 +63,15 @@ function updateData() {
 }
 
 
-function removeDuplicates(cart) {
-    let unique = [];
-    cart.forEach(item => {
-        if (!unique.includes(item)) {
-            unique.push(item);
-        }
-    });
-    return unique;
-}
+// function removeDuplicates(cart) {
+//     let unique = [];
+//     cart.forEach(item => {
+//         if (!unique.includes(item)) {
+//             unique.push(item);
+//         }
+//     });
+//     return unique;
+// }
 
-removeDuplicates(cart)
+// removeDuplicates(cart)
+

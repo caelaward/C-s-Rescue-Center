@@ -45,11 +45,32 @@
     </header>
 
     <main class="container">
-      <button >Add</button>
+      <button data-addbtn>Add</button>
       
       <table data-table class="table">
 
       </table>
+
+      <div class="modal" tabindex="-1">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Add More Products</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <input class="modal-body">
+             <input data-input1 placeholder="Item name...">
+             <input data-input2 placeholder="Item description...">
+             <input data-input3 placeholder="Item price...">
+             <input data-input4 placeholder="Item ...">
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
 
     </main>
 
