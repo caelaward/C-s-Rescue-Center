@@ -111,7 +111,7 @@ function add(index) {
 // add event listener on parent
 items.addEventListener('click',function (event) {
     if (event.target.hasAttribute('data-add')) {
-        alert('button pressed')
+        // alert('button pressed')
         add(event.target.value)
     }
 
