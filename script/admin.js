@@ -92,9 +92,9 @@ addbtn.addEventListener('click',function () {
 
 let savebtn=document.querySelector('[data-savebtn]')
 
-savebtn.addEventListener('click', something )
- function something() {
-  alert('nbiunwdjnfjn')
+savebtn.addEventListener('click', saveAdded )
+ function saveAdded() {
+  
   let input1=document.querySelector('[data-input1]').value
   let input2=document.querySelector('[data-input2]').value
   let input3=document.querySelector('[data-input3]').value
