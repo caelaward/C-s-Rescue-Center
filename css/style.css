@@ -13,7 +13,7 @@
 
 
 #name{
-    background: linear-gradient(112deg, #FFFFFF 50%, lightgrey  50%);
+    /* background: linear-gradient(112deg, #FFFFFF 50%, lightgrey  50%); */
     border: 3px solid #f1f1f1;
     margin-top:8%;
     margin-left:10%;
@@ -23,11 +23,11 @@
     
 }
 
-.body1{
-    background-image: url("https://i.postimg.cc/2jBSng5d/img1.jpg");
-    /* background: linear-gradient(112deg, #F5FFFA 50%, lightgrey  50%);*/
+/* .body1{
+    /* background-image: url("https://i.postimg.cc/2jBSng5d/img1.jpg"); */
+    /* background: linear-gradient(50deg, #F5FFFA 50%, lightgrey  50%); */
     /* background-color:#F5FFFA;  */
-}
+/* } */
 
 #logo{
     width:55px;
@@ -55,10 +55,10 @@
     width:40%;
     height:55vh;
 }
-#carouselExampleAutoplaying{
+/* #carouselExampleAutoplaying{
     padding-top:1%;
     
-}
+} */
 #img{
  float: left;
  padding:5px;
@@ -73,4 +73,23 @@
 .table{
     /* max-width: fit-content; */
     width: 50%;
+}
+
+#logoH {
+    width: 25px;
+    height: 30px;
+    padding: 2px;
+    mix-blend-mode: multiply;
+    transition: transform 0.3s;
+  } 
+ #logoH:hover{
+      transform: scale(1.2);
+    }
+
+.homeImg{
+    width: 100%;
+}    
+#contHome{
+    justify-content:center;
+    
 }
