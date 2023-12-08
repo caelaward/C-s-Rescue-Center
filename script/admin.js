@@ -66,7 +66,7 @@ display.addEventListener('click',function () {
     if(event.target.classList.contains('delete')) {
         //event.target is the button
         removeP(event.target.value) //passing value set to button
-        alert("Are you sure you want to delete this item")
+        alert("Item will be deleted")
     }
 
 })

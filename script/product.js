@@ -31,23 +31,10 @@ let items=document.querySelector('[data-items]')
 
 let sortbtn=document.querySelector('[data-sort]')
 
-// let compPrice= (a,b)=> {
-//         return a.price-b.price;
-//     }
-
-//     let sortedPrice=products.sort(compPrice)
-
-//     console.log(sortedPrice);
 
 
 
-// function sortPrice() {
-//     let sortedPrice=products.sort((a,b)=>{
-//         return parseInt(a.price) - parseInt (b.price);
-//     })
-//     productDisplay(sortedPrice)
-//     console.log(sortedPrice);
-// }
+
 
 //sort function
 sortbtn.addEventListener('click', sortPrice )
@@ -79,18 +66,11 @@ function find() {
 
 }
 inputV.addEventListener('keyup',find)
-// let searchbtn=document.querySelector('[data-search]')
-// searchbtn.addEventListener('click',function () {
-//     alert('Item searched will be displayed')
-//     find()
 
-// })
 
 
 let loader=document.querySelector('[data-spinner]')
-// function spinnerhide() {
-//     loader.style.display="none"
-// }
+
 
 if (products.length===0) {
     items.innerHTML=`
@@ -117,4 +97,3 @@ items.addEventListener('click',function (event) {
 
 })
 
-// localStorage.setItem

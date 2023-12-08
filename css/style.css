@@ -93,3 +93,13 @@
     justify-content:center;
     
 }
+.delete{
+    padding:5px;
+    border-radius: 12%;
+    background-color:transparent;
+    border-color: grey;
+}
+.delete:hover{
+    transform: scale(1.2);
+    background-color: grey;
+  }
