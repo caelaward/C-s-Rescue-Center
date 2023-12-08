@@ -103,3 +103,16 @@
     transform: scale(1.2);
     background-color: grey;
   }
+
+  .edit{
+    padding:5px;
+    border-radius: 12%;
+    background-color:transparent;
+    border-color: grey;
+}
+.edit:hover{
+    transform: scale(1.2);
+    background-color: grey;
+  }
+
+  
