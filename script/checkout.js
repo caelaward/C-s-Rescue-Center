@@ -73,3 +73,8 @@ function updateData() {
         console.error('Error in updateData:', error);
     }
 }
+let pbtn=document.querySelector('[data-Pbtn]')
+pbtn.addEventListener('click',function () {
+    alert('Thank you for your purchase')
+    
+})

@@ -55,10 +55,7 @@
     width:40%;
     height:55vh;
 }
-/* #carouselExampleAutoplaying{
-    padding-top:1%;
-    
-} */
+
 #img{
  float: left;
  padding:5px;
@@ -79,7 +76,7 @@
     
 }
 .table{
-    /* max-width: fit-content; */
+    
     width: 50%;
 }
 
@@ -127,4 +124,10 @@
     padding-top:10vh;
 }
  
-   
+/* @media screen and (max-width:720px) {
+    
+}    */
+
+#purchaseBtn{
+    margin-left:20%;;
+}
