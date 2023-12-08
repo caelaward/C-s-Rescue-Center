@@ -18,7 +18,7 @@ let items=document.querySelector('[data-items]')
                                                 <h5 class="card-title">${item.name}</h5>
                                                 <p class="card-text">${item.description}.</p>
                                                 <p class="price">R${item.price}</p>
-                                                <button 'class='w-50' id='btnAdd' value=${index} data-add>Add to cart</button>
+                                                <button 'class='w-50' id='btnAdd' value=${index} data-add>Cart</button>
                                             </div>
                                           </div>
                                         </div>
