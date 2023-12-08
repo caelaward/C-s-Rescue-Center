@@ -37,7 +37,7 @@ function checkoutDisplay(){
         `
     })
     //displays the item price
-    totalDis.textContent = `R${total}`
+    totalDis.textContent = `R${total}` 
     // join will join the trs together 
     displayCheckout.innerHTML=p.join('')
 }

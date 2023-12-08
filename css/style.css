@@ -122,6 +122,9 @@
     transform: scale(1.2);
     background-color: grey;
   }
-
+#contactForm{
+    padding-left:30%;
+    padding-top:10vh;
+}
  
    
