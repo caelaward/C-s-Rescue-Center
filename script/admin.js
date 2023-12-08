@@ -102,6 +102,7 @@ function tableDisplay() {
   });
   //join will join the trs together
   display.innerHTML = p.join("");
+  
 }
 tableDisplay(); //will ensure that the function still running
 
@@ -114,6 +115,8 @@ display.addEventListener("click", function () {
     alert("Item will be deleted");
   }
 });
+
+
 
 function removeP(position) {
   products.splice(position, 1); //right now event.target and positionhas the same value
@@ -128,6 +131,7 @@ function updateData() {
 
 let modal = new bootstrap.Modal(document.querySelector(".modal")); // Initialize the modal
 let addbtn = document.querySelector("[data-addbtn]");
+//giving event listener to add button to bring up the modal.. modal show allows modal to be brought up
 addbtn.addEventListener("click", function () {
   modal.show();
 });
@@ -152,14 +156,13 @@ let editButton = document.querySelector(".edit");
 display.addEventListener("click", function () {
   //event.target will pick up anything clicked inside the parent tag (from the children)
   if (event.target.classList.contains("edit")) {
-    //event.target is the button
-    // removeP(event.target.value) //passing value set to button
-    // alert("Item will be edited")
     editFunction(event.target.value);
   }
   updateData();
 });
-
+//sets variable to input tags in html
+//gives the variable a value .. using the index to identify what should be displayed
+//function is to allow one to edit the products being displayed
 function editFunction(index) {
   let input5 = document.querySelector("[data-input5]");
   let input6 = document.querySelector("[data-input6]");
@@ -170,33 +173,35 @@ function editFunction(index) {
   input7.value = products[index].price;
   input8.value = products[index].url;
 
-  document.getElementById("modalEdit").style.display = "block";
-  document.getElementById("modalEdit").setAttribute("data-index", index);
+  document.getElementById("modalEdit").style.display = "block"; //displays modal
+  document.getElementById("modalEdit").setAttribute("data-index", index); 
 }
-// tableDisplay(editFunction)
+
+//trim function removes all extra spaces between text
+//save function allows changes to be saved to local storage and to be displayed on my page
 
 function saveEdit() {
   let input5 = document.querySelector("[data-input5]").value.trim();
   let input6 = document.querySelector("[data-input6]").value.trim();
   let input7 = document.querySelector("[data-input7]").value.trim();
   let input8 = document.querySelector("[data-input8]").value.trim();
-  let position = document
-    .getElementById("modalEdit")
-    .getAttribute("data-index");
-  products[position].name = input5;
+  let position = document.getElementById("modalEdit").getAttribute("data-index");//sets variable to where I am targeting when modal opens up
+  products[position].name = input5; 
   products[position].description = input6;
   products[position].price = input7;
   products[position].url = input8;
-
+  
   updateData();
   editdone();
   tableDisplay();
 }
-
+//function to close the modal
 function editdone() {
   document.getElementById("modalEdit").style.display = "none";
 }
+
 //sort function
+//displays the prices from low to high.. if a - b = negative then b will be moved above a .. a is basically smaller than b.
 let sortbtn = document.querySelector("[data-sort]");
 sortbtn.addEventListener("click", sortPrice);
 
@@ -206,8 +211,9 @@ function sortPrice(event) {
   let sortedPrice = products.sort((a, b) => {
     return parseInt(a.price) - parseInt(b.price);
   });
-
+  
   tableDisplay(sortedPrice);
   alert("Items will be sorted by price from low to high");
   console.log(sortedPrice);
 }
+
