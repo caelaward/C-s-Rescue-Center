@@ -42,7 +42,7 @@ function sortPrice(event) {
   console.log(sortedPrice);
 }
 
-//search function
+//search function 
 let inputV = document.querySelector("[data-input]");
 function find() {
   let findItem = document.querySelector("[data-input]").value.toLowerCase();
@@ -66,7 +66,7 @@ if (products.length === 0) {
 } else {
   productDisplay(products);
 }
-
+//function pushes products into new array 
 function add(index) {
   cart.push(products[index]);
   localStorage.setItem("cart", JSON.stringify(cart));
@@ -74,7 +74,6 @@ function add(index) {
 // add event listener on parent
 items.addEventListener("click", function (event) {
   if (event.target.hasAttribute("data-add")) {
-    // alert('button pressed')
     add(event.target.value);
   }
 });
