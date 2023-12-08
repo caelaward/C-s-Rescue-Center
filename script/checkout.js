@@ -2,7 +2,7 @@ cart=JSON.parse(localStorage.getItem('cart'))
 let totalDis=document.querySelector('[data-total]')
 let displayCheckout=document.querySelector('[data-checkout]')
 let total=0
-let arr=[]//to catch the doubled item selected.
+//function to display my data on my checkout page... maps through the second array created 
 function checkoutDisplay(){
     let p = cart.map(function(item,index) {
         // takes items price and adds it 
@@ -76,5 +76,5 @@ function updateData() {
 let pbtn=document.querySelector('[data-Pbtn]')
 pbtn.addEventListener('click',function () {
     alert('Thank you for your purchase')
-    
+
 })
