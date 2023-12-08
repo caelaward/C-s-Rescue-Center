@@ -55,10 +55,10 @@ function find() {
 inputV.addEventListener("keyup", find);
 
 let loader = document.querySelector("[data-spinner]");
-
+//spinner displays when there is nothing inside of the product page
 if (products.length === 0) {
   items.innerHTML = `
-    *<div class="d-flex justify-content-center">
+    <div class="d-flex justify-content-center">
     <div class="spinner-border p-5 " id="spinner"  role="status">
       <span class="visually-hidden" data-spinner>Loading...</span>
     </div>

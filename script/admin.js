@@ -102,6 +102,7 @@ function tableDisplay() {
   });
   //join will join the trs together
   display.innerHTML = p.join("");
+  
 }
 tableDisplay(); //will ensure that the function still running
 
@@ -114,6 +115,8 @@ display.addEventListener("click", function () {
     alert("Item will be deleted");
   }
 });
+
+
 
 function removeP(position) {
   products.splice(position, 1); //right now event.target and positionhas the same value
@@ -159,7 +162,7 @@ display.addEventListener("click", function () {
   }
   updateData();
 });
-
+//sets variable to input tags
 function editFunction(index) {
   let input5 = document.querySelector("[data-input5]");
   let input6 = document.querySelector("[data-input6]");
@@ -187,7 +190,7 @@ function saveEdit() {
   products[position].description = input6;
   products[position].price = input7;
   products[position].url = input8;
-
+  
   updateData();
   editdone();
   tableDisplay();
@@ -206,8 +209,9 @@ function sortPrice(event) {
   let sortedPrice = products.sort((a, b) => {
     return parseInt(a.price) - parseInt(b.price);
   });
-
+  
   tableDisplay(sortedPrice);
   alert("Items will be sorted by price from low to high");
   console.log(sortedPrice);
 }
+
