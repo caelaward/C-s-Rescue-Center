@@ -55,23 +55,28 @@
     width:40%;
     height:55vh;
 }
-/* #carouselExampleAutoplaying{
-    padding-top:1%;
-    
-} */
+
 #img{
  float: left;
  padding:5px;
 }
 #btnAdd{
-  border-radius: 20px;
+    padding:5px;
+    border-radius: 12%;
+    background-color:transparent;
+    border-color: grey;
 }
+#btnAdd:hover{
+    transform: scale(1.2);
+    background-color: grey;
+  }
+
 #img-table{
    width:50px;
     
 }
 .table{
-    /* max-width: fit-content; */
+    
     width: 50%;
 }
 
@@ -92,4 +97,37 @@
 #contHome{
     justify-content:center;
     
+}
+.delete{
+    padding:5px;
+    border-radius: 12%;
+    background-color:transparent;
+    border-color: grey;
+}
+.delete:hover{
+    transform: scale(1.2);
+    background-color: grey;
+  }
+
+  .edit{
+    padding:5px;
+    border-radius: 12%;
+    background-color:transparent;
+    border-color: grey;
+}
+.edit:hover{
+    transform: scale(1.2);
+    background-color: grey;
+  }
+#contactForm{
+    padding-left:30%;
+    padding-top:10vh;
+}
+ 
+/* @media screen and (max-width:720px) {
+    
+}    */
+
+#purchaseBtn{
+    margin-left:20%;;
 }
